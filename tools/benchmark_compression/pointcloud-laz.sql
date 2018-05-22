@@ -57,7 +57,7 @@ FROM (
         1.0*a AS z,
          a/10 AS intensity,
          a/400 AS gid
-  FROM generate_series(1,100000) AS a
+  FROM generate_series(1,1000000) AS a
 ) AS values GROUP BY gid;
 
 TRUNCATE pointcloud_formats;

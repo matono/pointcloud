@@ -37,18 +37,18 @@ VALUES (5, 0,
     <pc:scale>1</pc:scale>
   </pc:dimension>
   <pc:metadata>
-    <Metadata name="compression">dimensional</Metadata>
+    <Metadata name="compression">ght</Metadata>
   </pc:metadata>
 </pc:PointCloudSchema>'
 );
 
 
-CREATE TABLE IF NOT EXISTS pa_compression_dimensional (
+CREATE TABLE IF NOT EXISTS pa_compression_ght (
     pa PCPATCH(5)
 );
-\d pa_compression_dimensional
+\d pa_compression_ght
 
-INSERT INTO pa_compression_dimensional (pa)
+INSERT INTO pa_compression_ght (pa)
 SELECT PC_Patch(PC_MakePoint(5, ARRAY[x,y,z,intensity]))
 FROM (
  SELECT
